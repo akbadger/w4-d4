@@ -24,12 +24,12 @@
 //     restoreStartButtonTimeout = setTimeout(restoreStartButton, 3000);
 // }
 
-// function restoreStartButton() {
-//     var startButton = document.querySelector('#start');
-//     startButton.innerHTML = 'Start';
-//     startButton.disabled = false;
-//     startButton.classList.remove('btn-danger');
-// }
+function restoreStartButton() {
+    var startButton = document.querySelector('#start');
+    startButton.innerHTML = 'Start';
+    startButton.disabled = false;
+    startButton.classList.remove('btn-danger');
+}
 
 // function handleCancelButton(e) {
 //     var cancelButton = e.target;
