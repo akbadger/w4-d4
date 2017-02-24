@@ -5,10 +5,18 @@ img {
     width: 100%;
 }
 
-/*#start {
-    margin-top: 30px;
+body {
+    background:lightcoral;
 }
 
-#cancel {
+#start {
     margin-top: 20px;
-}*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: lightgrey;
+    border: none;
+}
+
+#timer {
+    margin-top: 50px;
+}

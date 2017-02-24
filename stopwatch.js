@@ -1,11 +1,11 @@
 var minutes = 00;
 var seconds = 00;
 var totalTenths = 0;
+var startButton = document.querySelector('#start');
 
 document.querySelector('#start').addEventListener('click', function () {
     setInterval(startTimer, 10)
 });
-
 
 function startTimer() {
     totalTenths++;
@@ -26,17 +26,30 @@ function startTimer() {
         document.querySelector('#minutes').innerHTML = '0' + minutes;
     }
     if (minutes > 9) {
-            document.querySelector('#minutes').innerHTML = minutes;
+        document.querySelector('#minutes').innerHTML = minutes;
     }
-
-    // document.querySelector('#timer').innerHTML = `0${minutes} : 0${seconds} : ${tenths}`;
-
-    // pause();
 }
-// function pauseTimer() {
-//     document.querySelector('#start').addEventListener('click');
-//     startButton.innerHTML = 'Pause';
-// }
+
+function runningStartButton() {
+    // var startButton = document.querySelector('#start');
+    startButton.innerHTML = 'Pause';
+}
+document.querySelector('#start').addEventListener('click', runningStartButton);
+
+function pauseTimer() {
+    Interval = setInterval(startTimer, 10);
+    if (startButton.innerHTML === 'Pause') {
+        clearInterval(Interval);
+    }
+    else {
+        runningStartButton();
+    }
+}
+startButton.addEventListener('click', pauseTimer);
+
+//    
+
+
 
 // function toggleResets() {}
 // if (startButton.innerText === 'Pause') {
