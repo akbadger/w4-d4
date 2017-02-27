@@ -2,11 +2,13 @@
     box-sizing: border-box;
 }
 img {
-    width: 100%;
+    width: 300px;
+    border-radius: 50%;
 }
 
 body {
-    background:lightcoral;
+    padding:100px;
+    background: linear-gradient(150deg, lightcoral, lightgray);
 }
 
 #start {

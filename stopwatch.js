@@ -7,21 +7,21 @@ var startButton = document.querySelector('#start');
 var interval;
 var colorInterval;
 var timeoutInterval;
-
+ 
 
 //Listens to the startButton and on double-click, button text changes to start and timer resets to 00.
-document.querySelector('#start').addEventListener('dblclick', function (e) {
-    var startButton = e.target;
-    interval = setInterval(startTimer, 10)
-    if (startButton.innerHTML === 'Resume') {
-        console.log('hello');
-        clearInterval(interval);
-        document.querySelector('#tenths').innerHTML = '00';
-        document.querySelector('#seconds').innerHTML = '00';
-        document.querySelector('#minutes').innerHTML = '00';
-        document.querySelector('#start').innerHTML = 'Start';
-    }
-});
+document.querySelector('#start').addEventListener('dblclick', timeout);
+// function (e) {
+//     var startButton = e.target;
+//     interval = setInterval(startTimer, 10)
+//     if (startButton.innerHTML === 'Resume') {
+//         clearInterval(interval);
+//         document.querySelector('#tenths').innerHTML = '00';
+//         document.querySelector('#seconds').innerHTML = '00';
+//         document.querySelector('#minutes').innerHTML = '00';
+//         document.querySelector('#start').innerHTML = 'Start';
+//     }
+// });
 
 //listens to the startButton and on click changes behavior of timer based on what the button text is.
 document.querySelector('#start').addEventListener('click', function (e) {
@@ -92,8 +92,11 @@ function startTimer() {
 // Function that sets the 15-second timeout. Resets timer and also button text.
 function timeout() {
         clearInterval(interval);
+        clearInterval(colorInterval);
         document.querySelector('#tenths').innerHTML = '00';
         document.querySelector('#seconds').innerHTML = '00';
         document.querySelector('#minutes').innerHTML = '00';
         document.querySelector('#start').innerHTML = 'Start';
+
+        totalTenths = 0;
     }
