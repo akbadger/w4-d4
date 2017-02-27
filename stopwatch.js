@@ -56,7 +56,6 @@ function startTimer() {
     var minutes = Math.floor(totalTenths / 6000);
     var seconds = Math.floor((totalTenths - minutes * 6000) / 100);
     var tenths = totalTenths - (minutes * 6000 + seconds * 100);
-    // changeColor();
 
    if (tenths > 0) {
        document.getElementById('tenths').innerHTML = '0' + tenths;
